@@ -1,7 +1,7 @@
 {
-  "site_name": "Starter",
-  "title": "Eleventy Starter Boilerplate",
-  "description": "Starter code for your 11ty blog Boilerplate",
+  "site_name": "Dooftown",
+  "title": "Dooftown Eleventy Edition",
+  "description": "Minimal academic site",
   "url": "https://example.com",
   "locale": "en",
   "author": "Anonymous"

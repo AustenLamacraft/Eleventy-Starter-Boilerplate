@@ -63,5 +63,9 @@
     "*.json": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "@iktakahiro/markdown-it-katex": "^4.0.1",
+    "reveal.js": "^4.2.1"
   }
 }

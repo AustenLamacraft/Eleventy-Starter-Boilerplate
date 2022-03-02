@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.5.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -46,54 +50,47 @@
         "@context": "http://schema.org"
       }
     </script>
-    <% } %><%- include('webpack.ejs') %> <% if (page.url == "/") { %>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', (user) => {
-          if (!user) {
-            window.netlifyIdentity.on('login', () => {
-              document.location.href = '/admin/';
-            });
-          }
-        });
-      }
-    </script>
-    <% } %>
-  </head>
+    <% } %><%- include('webpack.ejs') %>
 
-  <body class="antialiased w-full text-gray-700">
-    <div class="max-w-screen-md mx-auto">
-      <div class="border-b border-gray-300">
-        <div class="pt-16 pb-8">
-          <h1 class="font-semibold text-3xl text-gray-800"><%= site.title %></h1>
-          <div class="text-xl"><%= site.description %></div>
-        </div>
+  </head>
+  <body>
+    <section>
+      <header>
         <nav>
-          <ul class="flex flex-wrap text-xl">
-            <li class="mr-6">
-              <a class="text-gray-700 border-none hover:no-underline hover:text-gray-800" href="/"
-                >Home</a
-              >
-            </li>
-            <li class="mr-6">
-              <a
-                class="text-gray-700 border-none hover:no-underline hover:text-gray-800"
-                href="https://github.com/ixartz/Eleventy-Starter-Boilerplate"
-              >
-                GitHub
-              </a>
+          <h1><%= site.title %></h1>
+          <h2><%= site.description %></h2>
+        </nav>
+        <nav>
+          <ul>
+            <li><a href="/">home</a></li>
+            <li><a href=".">about</a></li>
+            <li><a href=".">talks</a></li>
+            <li><a href=".">lectures</a></li>
+          </ul>
+        </nav>
+      </header>
+        <!-- <figure>
+          <img src="./tacit_logo.png" alt="tacit logo" style="max-height: 100px;"/>
+        </figure> -->
+        
+      <%- content %>
+      
+      <footer>
+        <nav>
+          <ul>
+            <li>
+              <small>Made by <a href="http://www.yegor256.com">Yegor Bugayenko</a>, 2015-2021</small>
             </li>
           </ul>
         </nav>
-      </div>
-
-      <div class="text-xl py-5"><%- content %></div>
-
-      <div class="border-t border-gray-300 text-center py-8">
-        Made with <span role="img" aria-label="Love">♥</span> by
-        <a href="https://creativedesignsguru.com">CreativeDesignsGuru</a>
-      </div>
-    </div>
+        <nav>
+          <ul>
+            <li><small><a href="https://github.com/yegor256/tacit">GitHub</a></small></li>
+            <li><small><a href="https://yegor256.github.io/tacit/tacit-css-VERSION.min.css">Download</a></small></li>
+            <li><small><a href="https://opensource.org/licenses/MIT">MIT license</a></small></li>
+          </ul>
+        </nav>
+      </footer>
+    </section>
   </body>
 </html>

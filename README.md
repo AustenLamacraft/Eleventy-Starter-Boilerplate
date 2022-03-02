@@ -1,3 +1,16 @@
+# Dooftown Elventy Editions
+
+Things to try out
+
+- [x] Static rendering of LaTeX
+- [x] Reveal slides
+- [ ] https://github.com/google/eleventy-high-performance-blog
+- [ ] Switch to [Tacit](https://yegor256.github.io/tacit/)
+- [ ] Citations
+- [ ] Automatically generate publications from ArXiv
+- [ ] Pyodide in slides
+
+
 # Eleventy Starter Boilerplate
 
 <p align="center">
